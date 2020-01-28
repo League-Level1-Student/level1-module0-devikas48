@@ -23,7 +23,7 @@ public class Houses {
 
 			int s = ran.nextInt(3);
 			if (s == 0) {
-				house("small", Color.GREEN);
+				drawPointyRoof("small", Color.GREEN);
 			} else if (s == 1) {
 				house("medium", Color.cyan);
 			} else if (s == 2) {
@@ -45,7 +45,7 @@ public class Houses {
 		rob.move(height);
 	}
 
-	public void house(String size, Color color) {
+  public void house(String size, Color color) {
 		rob.setPenColor(color);
 		if (size.contentEquals("small")) {
 			house(60);
@@ -54,8 +54,28 @@ public class Houses {
 		} else if (size.equals("large")) {
 			house(250);
 		} else {
-			house(100);
+	    	house(100);
 		}
 	}
 
+	public void drawPointyRoof(String size, Color color) {
+	    rob.move(50);
+		rob.turn(50);
+		rob.move(40);
+		rob.turn(95);
+		rob.move(35);
+		rob.turn(35);
+		rob.move(48);
+	}
+
+	
+	public void drawFlatRoof(String size, Color color) {
+		rob.move(200);
+		rob.turn(90);
+		rob.move(50);
+		rob.turn(90);
+		rob.turn(200);
+	}
 }
+	
+	
