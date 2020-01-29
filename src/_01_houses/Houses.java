@@ -62,10 +62,10 @@ public class Houses {
 	    rob.move(50);
 		rob.turn(50);
 		rob.move(40);
-		rob.turn(95);
-		rob.move(35);
-		rob.turn(35);
-		rob.move(48);
+		rob.turn(90);
+		rob.move(36);
+		rob.turn(40);
+		rob.move(46);
 	}
 
 	
