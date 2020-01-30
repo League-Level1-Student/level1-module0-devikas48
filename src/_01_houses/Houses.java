@@ -27,12 +27,13 @@ public class Houses {
 			} else if (s == 1) {
 				house("medium", Color.cyan);
 			} else if (s == 2) {
-				house("large", Color.MAGENTA);
+				drawFlatRoof("large", Color.MAGENTA);
 			}
 
-			rob.turn(-90);
-			rob.move(30);
-			rob.turn(-90);
+		//keeps it stable //
+		rob.turn(-90);
+		rob.move(30);
+		rob.turn(-90);
 
 		}
 	}
@@ -59,6 +60,7 @@ public class Houses {
 	}
 
 	public void drawPointyRoof(String size, Color color) {
+		rob.setPenColor(color);
 	    rob.move(50);
 		rob.turn(50);
 		rob.move(40);
@@ -70,11 +72,12 @@ public class Houses {
 
 	
 	public void drawFlatRoof(String size, Color color) {
+		rob.setPenColor(color);
 		rob.move(200);
 		rob.turn(90);
 		rob.move(50);
 		rob.turn(90);
-		rob.turn(200);
+		rob.move(200);
 	}
 }
 	
