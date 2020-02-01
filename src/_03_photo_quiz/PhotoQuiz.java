@@ -27,48 +27,49 @@ public class PhotoQuiz {
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address”)
 		String flower = "https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
-		
-		
+
 		// 2. create a variable of type "Component" that will hold your image
-Component c ;
+		Component c;
 		// 3. use the "createImage()" method below to initialize your Component
-c = createImage(flower);
+		c = createImage(flower);
 		// 4. add the image to the quiz window
-quizWindow.add(c);
+		quizWindow.add(c);
 		// 5. call the pack() method on the quiz window
-quizWindow.pack();
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
-//String question = JOptionPane.showInputDialog("What color is the flower?");
+		String question = JOptionPane.showInputDialog("What color is the flower?");
 //		// 7. print "CORRECT" if the user gave the right answer
-//if(question.equalsIgnoreCase("Pink")) {
-//System.out.println("CORRECT");
-//} else {
-//	System.out.println("INCORRECT");
-//}
+		if (question.equalsIgnoreCase("Pink")) {
+			System.out.println("CORRECT");
+		} else {
+			System.out.println("INCORRECT");
+		}
+
 //		// 8. print "INCORRECT" if the answer is wrong
 //
 //		// 9. remove the component from the quiz window (you may not see the
 //		// effect of this until step 12)
-//quizWindow.remove(c);
+		quizWindow.remove(c);
+
 //		// 10. find another image and create it (might take more than one line
 //		// of code)
-//String flowerTwo = ("https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg");
+		String flowerTwo = "https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__340.jpg";
 //		// 11. add the second image to the quiz window
-//Component d;
+		Component d;
 //
-//d = createImage(flowerTwo);
-//quizWindow.add(d);
+		d = createImage(flowerTwo);
+		quizWindow.add(d);
 //		// 12. pack the quiz window
-//quizWindow.pack();
+		quizWindow.pack();
 //		// 13. ask another question
-//String questionTwo = JOptionPane.showInputDialog("What color is this flower?");
+		String questionTwo = JOptionPane.showInputDialog("What color is this flower?");
 //		// 14+ check answer, say if correct or incorrect, etc.
-//if(questionTwo.equalsIgnoreCase("White")) {
-//	System.out.println("CORRECT");
-//} else {
-//	System.out.println("INCORRECT");
-//	
-//}
+		if (questionTwo.equalsIgnoreCase("White")) {
+			System.out.println("CORRECT");
+		} else {
+			System.out.println("INCORRECT");
+
+		}
 	}
 
 	private Component createImage(String imageUrl) throws MalformedURLException {
@@ -77,9 +78,8 @@ quizWindow.pack();
 		JLabel imageLabel = new JLabel(icon);
 		return imageLabel;
 	}
-
-	/* OPTIONAL */
-	// *14. add scoring to your quiz
-	// *15. make something happen when mouse enters image
-	// (imageComponent.addMouseMotionListener())
 }
+/* OPTIONAL */
+// *14. add scoring to your quiz
+// *15. make something happen when mouse enters image
+// (imageComponent.addMouseMotionListener())
