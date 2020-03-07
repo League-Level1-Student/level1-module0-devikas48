@@ -20,7 +20,8 @@ public class cutenessTV implements ActionListener {
         
         frame.setVisible(true);
         button.addActionListener(this);
-        
+        button2.addActionListener(this);
+        button3.addActionListener(this);
         
         frame.add(panel);
         panel.add(button);
@@ -40,11 +41,21 @@ public class cutenessTV implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		System.out.println("Button clicked");
+		JButton buttonclicked = (JButton) e.getSource();
 		
+		if (buttonclicked == button) {
 		showDucks();
-		showFrog();
-		showFluffyUnicorns();
+		}
 		
+		if (buttonclicked == button2) {
+		System.out.println("frog");
+		showFrog();
+		}
+		
+		if (buttonclicked == button3) {
+			System.out.println("unicorns");
+		showFluffyUnicorns();
+		}
 		
 		
 	}
